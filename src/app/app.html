@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">{{ title() }}</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/book" routerLinkActive="active" ariaCurrentWhenActive="page">Book</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/merch" routerLinkActive="active" ariaCurrentWhenActive="page">Merch</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/live" routerLinkActive="active" ariaCurrentWhenActive="page">Live</a>
+        </li>
+      </ul>
+      <div class="social-links ms-3 d-none d-lg-flex align-items-center">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://bsky.app" target="_blank" rel="noopener" aria-label="Bluesky">
+          <i class="fab fa-bluesky"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="text-center">
+  <div class="container">
+    <p class="mb-2">Ticket to Riot &mdash; RVA's Own Punk Rock Beatles Tribute Band</p>
+    <div class="social-links mb-2">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://bsky.app" target="_blank" rel="noopener" aria-label="Bluesky">
+        <i class="fab fa-bluesky"></i>
+      </a>
+    </div>
+    <p class="small mb-0 opacity-75">&copy; 2025 Ticket to Riot. All rights reserved.</p>
+  </div>
+</footer>
