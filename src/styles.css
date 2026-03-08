@@ -1,0 +1,204 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@700&display=swap');
+
+/* ===== Colour Variables ===== */
+:root {
+  --color-cream: #ebe5d9;
+  --color-cream-dark: #e0d9cc;
+  --color-dark-gray: #1a1a1a;
+  --color-british-red: #cf142b;
+  --color-british-blue: #012169;
+  --color-british-white: #ffffff;
+  --color-accent-hover: #8b0000;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Special Elite', cursive;
+}
+
+/* ===== Base ===== */
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark-gray);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===== Grungy noise overlay ===== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: var(--color-cream) !important;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  font-family: var(--font-display) !important;
+  font-size: 1.6rem;
+  color: var(--color-dark-gray) !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: none;
+}
+
+.navbar .nav-link {
+  color: var(--color-dark-gray) !important;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--color-british-red) !important;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: var(--color-cream-dark);
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 var(--color-british-red);
+}
+
+.card-header {
+  background-color: var(--color-cream-dark);
+  color: var(--color-dark-gray);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  background-color: var(--color-british-red);
+  border-color: var(--color-british-red);
+  color: var(--color-british-white);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0.25rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--color-british-blue);
+}
+
+a:hover {
+  color: var(--color-british-red);
+}
+
+/* ===== List group items ===== */
+.list-group-item {
+  background-color: transparent;
+  border-color: var(--color-british-blue);
+  color: var(--color-dark-gray);
+  font-family: var(--font-body);
+}
+
+/* ===== Social icons ===== */
+.social-links a {
+  color: var(--color-dark-gray);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  color: var(--color-british-red);
+  transform: scale(1.2);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-cream);
+  color: var(--color-dark-gray);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  font-family: var(--font-display);
+}
+
+/* ===== Alert overrides ===== */
+.alert-warning {
+  background-color: rgba(255, 193, 7, 0.2);
+  border-color: #ffc107;
+  color: var(--color-dark-gray);
+}
+
+.alert-info {
+  background-color: rgba(1, 33, 105, 0.1);
+  border-color: var(--color-british-blue);
+  color: var(--color-dark-gray);
+}
+
+/* ===== Hero section ===== */
+.hero-section {
+  background-color: var(--color-cream);
+  color: var(--color-dark-gray);
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+}
+
+.hero-section .lead {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+}
+
+/* ===== Show date box ===== */
+.show-date-box {
+  background-color: var(--color-british-red);
+  color: var(--color-british-white);
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font-display);
+}
+
+.show-date-box .month {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.show-date-box .day {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.show-date-box .year {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.9;
+}
