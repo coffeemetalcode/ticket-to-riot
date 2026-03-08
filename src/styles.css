@@ -3,7 +3,8 @@
 
 /* ===== Colour Variables ===== */
 :root {
-  --color-cream: #f5f0e8;
+  --color-cream: #ebe5d9;
+  --color-cream-dark: #e0d9cc;
   --color-dark-gray: #1a1a1a;
   --color-british-red: #cf142b;
   --color-british-blue: #012169;
@@ -40,22 +41,21 @@ body::before {
 
 /* ===== Navbar ===== */
 .navbar {
-  background-color: var(--color-british-blue) !important;
-  border-bottom: 4px solid var(--color-british-red);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: var(--color-cream) !important;
+  box-shadow: none;
 }
 
 .navbar-brand {
   font-family: var(--font-display) !important;
   font-size: 1.6rem;
-  color: var(--color-british-white) !important;
+  color: var(--color-dark-gray) !important;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 0 var(--color-british-red);
+  text-shadow: none;
 }
 
 .navbar .nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--color-dark-gray) !important;
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -69,19 +69,20 @@ body::before {
 
 /* ===== Cards ===== */
 .card {
-  background-color: rgba(255, 255, 255, 0.65);
-  border: 2px solid var(--color-british-blue);
-  border-radius: 0;
+  background-color: var(--color-cream-dark);
+  border: none;
+  border-radius: 0.5rem;
   box-shadow: 4px 4px 0 var(--color-british-red);
 }
 
 .card-header {
-  background-color: var(--color-british-blue);
-  color: var(--color-british-white);
+  background-color: var(--color-cream-dark);
+  color: var(--color-dark-gray);
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-radius: 0 !important;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
 }
 
 /* ===== Buttons ===== */
@@ -122,7 +123,7 @@ a:hover {
 
 /* ===== Social icons ===== */
 .social-links a {
-  color: var(--color-british-white);
+  color: var(--color-dark-gray);
   font-size: 1.5rem;
   margin: 0 0.5rem;
   transition:
@@ -138,9 +139,8 @@ a:hover {
 
 /* ===== Footer ===== */
 footer {
-  background-color: var(--color-british-blue);
-  border-top: 4px solid var(--color-british-red);
-  color: var(--color-british-white);
+  background-color: var(--color-cream);
+  color: var(--color-dark-gray);
   padding: 1.5rem 0;
   margin-top: 3rem;
   font-family: var(--font-display);
@@ -161,42 +161,20 @@ footer {
 
 /* ===== Hero section ===== */
 .hero-section {
-  background: linear-gradient(135deg, var(--color-british-blue) 0%, #1a2a6c 50%, var(--color-british-red) 100%);
-  color: var(--color-british-white);
+  background-color: var(--color-cream);
+  color: var(--color-dark-gray);
   padding: 4rem 2rem;
   margin-bottom: 2rem;
-  border-bottom: 4px solid var(--color-british-red);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(255, 255, 255, 0.03) 10px,
-    rgba(255, 255, 255, 0.03) 20px
-  );
-  pointer-events: none;
 }
 
 .hero-section h1 {
   font-size: 3.5rem;
-  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
   letter-spacing: 4px;
 }
 
 .hero-section .lead {
   font-family: var(--font-body);
   font-size: 1.25rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* ===== Show date box ===== */
