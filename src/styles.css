@@ -197,7 +197,7 @@ footer {
 
 /* ===== Show date box ===== */
 .show-date-box {
-  background-color: var(--color-british-red);
+  background-color: var(--color-british-blue);
   color: var(--color-british-white);
   text-align: center;
   padding: 1rem;
