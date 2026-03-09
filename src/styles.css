@@ -4,9 +4,9 @@
 @font-face {
   font-family: 'Bootle';
   src:
-    url('/assets/fonts/BOOTLE__.woff2') format('woff2'),
-    url('/assets/fonts/BOOTLE__.woff') format('woff'),
-    url('/assets/fonts/BOOTLE__.ttf') format('ttf');
+    url('/ticket-to-riot/assets/fonts/BOOTLE__.woff2') format('woff2'),
+    url('/ticket-to-riot/assets/fonts/BOOTLE__.woff') format('woff'),
+    url('/ticket-to-riot/assets/fonts/BOOTLE__.ttf') format('ttf');
   font-weight: normal;
 }
 
