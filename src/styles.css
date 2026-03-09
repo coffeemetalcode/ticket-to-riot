@@ -1,17 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Oswald:wght@700&display=swap');
 
+@font-face {
+  font-family: 'Bootle';
+  src:
+    url('/assets/fonts/BOOTLE__.woff2') format('woff2'),
+    url('/assets/fonts/BOOTLE__.woff') format('woff'),
+    url('/assets/fonts/BOOTLE__.ttf') format('truetype');
+  font-weight: normal;
+}
+
 /* ===== Colour Variables ===== */
 :root {
   --color-cream: #ebe5d9;
   --color-cream-dark: #e0d9cc;
   --color-dark-gray: #1a1a1a;
-  --color-british-red: #cf142b;
-  --color-british-blue: #012169;
+  --color-british-red: #c82127;
+  --color-british-blue: #1b4378;
   --color-british-white: #ffffff;
   --color-accent-hover: #8b0000;
   --font-display: 'Oswald', sans-serif;
   --font-body: 'Special Elite', cursive;
+  --font-logo: 'Bootle', sans-serif;
 }
 
 /* ===== Base ===== */
@@ -22,7 +32,12 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -32,7 +47,10 @@ h1, h2, h3, h4, h5, h6 {
 body::before {
   content: '';
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9999;
@@ -46,11 +64,11 @@ body::before {
 }
 
 .navbar-brand {
-  font-family: var(--font-display) !important;
+  font-family: var(--font-logo) !important;
   font-size: 1.6rem;
   color: var(--color-dark-gray) !important;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 3px; */
   text-shadow: none;
 }
 
