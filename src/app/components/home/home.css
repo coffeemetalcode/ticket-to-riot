@@ -1,0 +1,22 @@
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-image img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-image img {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-image img {
+    max-width: 90%;
+  }
+}
