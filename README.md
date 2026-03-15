@@ -45,5 +45,5 @@ Runs unit tests with Vitest.
 ## Deploy to GitHub Pages
 
 ``` bash
-ng deploy --base-href=ticket-to-riot
+ng deploy --base-href=/ticket-to-riot/
 ```
