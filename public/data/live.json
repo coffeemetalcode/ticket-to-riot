@@ -1,0 +1,25 @@
+{
+  "live": [
+    {
+      "date": "May 2, 2026",
+      "venue": "Bon Air Roo",  
+      "location": "Bon Air, VA",
+      "doors": "1 PM",
+      "show": "5 PM"
+    },
+    {
+      "date": "May 24, 2026",
+      "venue": "Canal Club",
+      "location": "Richmond, VA",
+      "doors": "6 PM",
+      "show": "9 PM"
+    },
+    {
+      "date": "May 31, 2026",
+      "venue": "The Broadberry",
+      "location": "Richmond, VA",
+      "doors": "7 PM",
+      "show": "8 PM"
+    }
+  ]
+}
