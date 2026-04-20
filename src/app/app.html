@@ -52,18 +52,7 @@
         </li>
       </ul>
       <div class="social-links ms-3 d-none d-lg-flex align-items-center">
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://bsky.app" target="_blank" rel="noopener" aria-label="Bluesky">
-          <i class="fab fa-bluesky"></i>
-        </a>
+        <app-social-links [links]="socialLinks()" />
       </div>
     </div>
   </div>
@@ -77,18 +66,7 @@
   <div class="container">
     <p class="mb-2">Ticket to Riot &mdash; RVA's Punk Beatles Tribute</p>
     <div class="social-links mb-2">
-      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://bsky.app" target="_blank" rel="noopener" aria-label="Bluesky">
-        <i class="fab fa-bluesky"></i>
-      </a>
+      <app-social-links [links]="socialLinks()" />
     </div>
     <p class="small mb-0 opacity-75">&copy; 2025 Ticket to Riot. All rights reserved.</p>
   </div>
