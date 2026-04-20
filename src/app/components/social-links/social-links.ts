@@ -1,11 +1,6 @@
 import { Component, input } from '@angular/core';
 
-// TODO: Move to shared location and export
-interface ISocialLink {
-  name: string;
-  url: string;
-  icon: string;
-}
+import { ISocialLink } from '@riot-models';
 
 @Component({
   selector: 'app-social-links',

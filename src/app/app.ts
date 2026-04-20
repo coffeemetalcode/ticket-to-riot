@@ -1,8 +1,8 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
-import { GhData } from './shared/services/gh-data';
 import { SocialLinks } from './components/social-links/social-links';
+import { GhData } from './shared/services';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ export class App implements OnInit {
   protected socialLinks = signal<any[]>([]);
 
   ngOnInit(): void {
-    this.#ghDataService.getSocialLinks().then((data) => {
+    this.#ghDataService.getSocialLinks().subscribe((data) => {
       this.socialLinks.set(data.socialLinks);
     });
   }

@@ -13,7 +13,11 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "@riot-models": ["./src/app/shared/models/*", "./src/app/shared/models/index"],
+      "@riot-services": ["./src/app/shared/services/*", "./src/app/shared/services/index"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
