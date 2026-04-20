@@ -1,25 +1,33 @@
 {
   "live": [
     {
-      "date": "May 2, 2026",
-      "venue": "Bon Air Roo",  
-      "location": "Bon Air, VA",
+      "date": "2026-05-02",
+      "venue": "Bon Air Roo",
+      "locationLabel": "Bon Air, VA",
+      "locationAddress": "",
+      "locationNavLink": "",
       "doors": "1 PM",
       "show": "5 PM"
     },
     {
-      "date": "May 24, 2026",
+      "date": "2026-05-24",
       "venue": "Canal Club",
-      "location": "Richmond, VA",
+      "locationLabel": "Richmond, VA",
+      "locationAddress": "",
+      "locationNavLink": "",
       "doors": "6 PM",
-      "show": "9 PM"
+      "show": "9 PM",
+      "ticketLink": "https://www.ticketweb.com/event/tickt-to-riot-tickets/12234567?pl=canalclub"
     },
     {
-      "date": "May 31, 2026",
+      "date": "2026-05-31",
       "venue": "The Broadberry",
-      "location": "Richmond, VA",
+      "locationLabel": "Richmond, VA",
+      "locationAddress": "",
+      "locationNavLink": "",
       "doors": "7 PM",
-      "show": "8 PM"
+      "show": "8 PM",
+      "ticketLink": "https://www.ticketweb.com/event/tickt-to-riot-tickets/12234567?pl=broadberry"
     }
   ]
 }
