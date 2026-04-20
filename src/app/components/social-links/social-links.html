@@ -1,0 +1,5 @@
+@for (link of links(); track link.url) {
+  <a [href]="link.url" target="_blank" rel="noopener" [attr.aria-label]="link.name" class="me-3">
+    <i class="fab" [class]="link.icon"></i>
+  </a>
+}
