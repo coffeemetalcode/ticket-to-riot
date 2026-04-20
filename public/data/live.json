@@ -1,8 +1,9 @@
 {
   "live": [
     {
+      "eventName": "Bon Air Roo",
       "date": "2026-05-02",
-      "venue": "Bon Air Roo",
+      "venue": "Creek Side Court",
       "locationLabel": "Bon Air, VA",
       "locationAddress": "Creek Side Court, Bon Air, VA 23235",
       "locationNavLink": "https://maps.app.goo.gl/5xqoFN1hdN5baNd88",
@@ -10,6 +11,7 @@
       "show": "5 PM"
     },
     {
+      "eventName": "Punk Beatles Night",
       "date": "2026-05-24",
       "venue": "Canal Club",
       "locationLabel": "Richmond, VA",
@@ -20,6 +22,7 @@
       "ticketLink": "https://www.ticketweb.com/event/tickt-to-riot-tickets/12234567?pl=canalclub"
     },
     {
+      "eventName": "RVA Punk Fest",
       "date": "2026-05-31",
       "venue": "The Broadberry",
       "locationLabel": "Richmond, VA",
