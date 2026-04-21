@@ -113,13 +113,24 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 0.25rem;
+  --bs-btn-disabled-bg: var(--color-british-blue);
+  --bs-btn-disabled-border-color: var(--color-british-blue);
+  --bs-btn-disabled-color: var(--color-british-white);
+  --bs-btn-disabled-opacity: 1;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
+  color: var(--color-british-white);
   background-color: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn-link,
+.btn-link:hover {
+  color: var(--color-british-white);
+  text-decoration: none;
 }
 
 /* ===== Links ===== */
@@ -193,30 +204,4 @@ footer {
 .hero-section .lead {
   font-family: var(--font-body);
   font-size: 1.25rem;
-}
-
-/* ===== Show date box ===== */
-.show-date-box {
-  background-color: var(--color-british-blue);
-  color: var(--color-british-white);
-  text-align: center;
-  padding: 1rem;
-  font-family: var(--font-display);
-}
-
-.show-date-box .month {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.show-date-box .day {
-  font-size: 2.5rem;
-  line-height: 1;
-  margin: 0;
-}
-
-.show-date-box .year {
-  font-size: 0.85rem;
-  margin: 0;
-  opacity: 0.9;
 }

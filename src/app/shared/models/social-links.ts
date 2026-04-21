@@ -3,3 +3,7 @@ export interface ISocialLink {
   url: string;
   icon: string;
 }
+
+export interface ISocialLinksHttpResponse {
+  socialLinks: ISocialLink[];
+}

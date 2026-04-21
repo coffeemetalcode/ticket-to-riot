@@ -1,0 +1,25 @@
+/* ===== Show date box ===== */
+.show-date-box {
+  background-color: var(--color-british-blue);
+  color: var(--color-british-white);
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font-display);
+}
+
+.show-date-box .month {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.show-date-box .day {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.show-date-box .year {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.9;
+}
