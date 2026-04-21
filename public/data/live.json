@@ -9,28 +9,6 @@
       "locationNavLink": "https://maps.app.goo.gl/5xqoFN1hdN5baNd88",
       "doors": "1 PM",
       "show": "5 PM"
-    },
-    {
-      "eventName": "Punk Beatles Night",
-      "date": "2026-05-24",
-      "venue": "Canal Club",
-      "locationLabel": "Richmond, VA",
-      "locationAddress": "1545 E Cary St, Richmond, VA 23219",
-      "locationNavLink": "https://maps.app.goo.gl/rkGx8uALDR1cV5vf9",
-      "doors": "7 PM",
-      "show": "8 PM",
-      "ticketLink": "https://www.ticketweb.com/event/tickt-to-riot-tickets/12234567?pl=canalclub"
-    },
-    {
-      "eventName": "RVA Punk Fest",
-      "date": "2026-05-31",
-      "venue": "The Broadberry",
-      "locationLabel": "Richmond, VA",
-      "locationAddress": "2729 W Broad St, Richmond, VA 23220",
-      "locationNavLink": "https://maps.app.goo.gl/GD4n176TukgcHhJVA",
-      "doors": "7 PM",
-      "show": "8 PM",
-      "ticketLink": "https://www.ticketweb.com/event/tickt-to-riot-tickets/12234567?pl=broadberry"
     }
   ]
 }

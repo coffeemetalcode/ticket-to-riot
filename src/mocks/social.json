@@ -1,0 +1,24 @@
+{
+  "socialLinks": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/tickettoriot",
+      "icon": "fa-facebook"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/tickettoriot/",
+      "icon": "fa-instagram"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@TicketToRiot",
+      "icon": "fa-youtube"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://bsky.app/profile/tickettoriot.com",
+      "icon": "fa-bluesky"
+    }
+  ]
+}
