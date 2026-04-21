@@ -10,71 +10,52 @@
     <div class="col-lg-8 mx-auto">
       <h2 class="mb-4">Upcoming Shows</h2>
 
-      <div class="alert alert-warning mt-4" role="alert">
-        <h5 class="alert-heading">
-          <i class="fas fa-exclamation-triangle me-2"></i>Warning:
-        </h5>
-        <p class="mb-0">None of these dates are real &mdash; yet!</p>
-      </div>
+      <!-- <div class="alert alert-warning mt-4" role="alert">
+           <h5 class="alert-heading"><i class="fas fa-exclamation-triangle me-2"></i>Warning:</h5>
+           <p class="mb-0">None of these dates are real &mdash; yet!</p>
+           </div>
+      -->
 
-      <div class="card mb-3">
-        <div class="card-body p-0">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <div class="show-date-box h-100 d-flex flex-column justify-content-center">
-                <p class="month">APR</p>
-                <p class="day">12</p>
-                <p class="year">2025</p>
+      @for (event of liveEvents(); track event.date) {
+        <div class="card mb-3">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <div class="show-date-box h-100 d-flex flex-column justify-content-center">
+                  <p class="month">{{ event.date | date: 'LLL' | uppercase }}</p>
+                  <p class="day">{{ event.date | date: 'dd' }}</p>
+                  <p class="year">{{ event.date | date: 'YYYY' }}</p>
+                </div>
               </div>
-            </div>
-            <div class="col-md-9 p-3">
-              <h4>Punk Beatles Night</h4>
-              <p class="mb-1">
-                <i class="fas fa-map-marker-alt me-1 text-danger"></i>
-                <strong>The Broadberry</strong> &mdash; Richmond, VA
-              </p>
-              <p class="mb-1">
-                <i class="fas fa-clock me-1 text-danger"></i>Doors 7 PM &bull; Show 8 PM
-              </p>
-              <button class="btn btn-primary mt-2">
-                <i class="fas fa-ticket-alt me-1"></i>Get Tickets
-              </button>
+              <div class="col-md-9 p-3">
+                <h4>{{ event.eventName }}</h4>
+                <p class="mb-1">
+                  <i class="fas fa-map-marker-alt me-1 text-danger"></i>
+                  <a [href]="event.locationNavLink" target="_blank">
+                    <strong>{{ event.venue }}</strong> &mdash; {{ event.locationLabel }}
+                  </a>
+                </p>
+                <p class="mb-1">
+                  <i class="fas fa-clock me-1 text-danger"></i>Doors {{ event.doors }} &bull; Show
+                  {{ event.show }}
+                </p>
+                @if (event.ticketLink) {
+                  <button class="btn btn-primary mt-2">
+                    <a class="btn-link" [href]="event.ticketLink" target="_blank">
+                      <i class="fas fa-ticket-alt me-1"></i>Get Tickets
+                    </a>
+                  </button>
+                } @else {
+                  <button class="btn btn-primary mt-2" type="button" disabled>Free!</button>
+                }
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="card mb-3">
-        <div class="card-body p-0">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <div class="show-date-box h-100 d-flex flex-column justify-content-center">
-                <p class="month">MAY</p>
-                <p class="day">24</p>
-                <p class="year">2025</p>
-              </div>
-            </div>
-            <div class="col-md-9 p-3">
-              <h4>RVA Punk Fest</h4>
-              <p class="mb-1">
-                <i class="fas fa-map-marker-alt me-1 text-danger"></i>
-                <strong>Canal Club</strong> &mdash; Richmond, VA
-              </p>
-              <p class="mb-1">
-                <i class="fas fa-clock me-1 text-danger"></i>Doors 6 PM &bull; Show 9 PM
-              </p>
-              <button class="btn btn-primary mt-2">
-                <i class="fas fa-ticket-alt me-1"></i>Get Tickets
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      }
+      <!-- TODO: Create shared alerts component with `input()` props for type and content -->
       <div class="alert alert-info mt-4" role="alert">
-        <h5 class="alert-heading">
-          <i class="fas fa-bell me-2"></i>Stay Updated!
-        </h5>
+        <h5 class="alert-heading"><i class="fas fa-bell me-2"></i>Stay Updated!</h5>
         <p class="mb-0">Follow us on social media for the latest show announcements.</p>
       </div>
     </div>
