@@ -1,4 +1,3 @@
-import { DatePipe } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -16,12 +15,15 @@ import { SocialLinks } from './components/social-links/social-links';
 export class App implements OnInit {
   #ghDataService = inject(GhData);
 
+  protected readonly copyrightYear = signal<string>('');
   protected readonly title = signal('Ticket to rioT');
-  protected socialLinks = signal<ISocialLink[]>([]);
+  protected readonly socialLinks = signal<ISocialLink[]>([]);
 
   ngOnInit(): void {
     this.#ghDataService.getSocialLinks().subscribe((data) => {
       this.socialLinks.set(data.socialLinks);
     });
+
+    this.copyrightYear.set(new Date().getFullYear().toString());
   }
 }
