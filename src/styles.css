@@ -20,8 +20,8 @@
   --color-british-white: #ffffff;
   --color-accent-hover: #8b0000;
   --font-display: 'Oswald', sans-serif;
-  --font-body: 'Special Elite', cursive;
-  --font-logo: 'Bootle', sans-serif;
+  --font-body: 'Special Elite', monospace;
+  --font-logo: 'Bootle', serif;
 }
 
 /* ===== Base ===== */
