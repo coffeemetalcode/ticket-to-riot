@@ -7,6 +7,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './home.css',
 })
 export class Home {
-  protected readonly heroImageUrl = signal('assets/img/ticket-to-riot-hero-image.png');
+  protected readonly heroImageUrl = signal('assets/img/ticket-to-riot-hero-image-blk.png');
   protected readonly heroImageAltText = signal('Ticket to Riot Hero Image');
 }
