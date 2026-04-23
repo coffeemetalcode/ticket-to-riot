@@ -204,4 +204,5 @@ footer {
 .hero-section .lead {
   font-family: var(--font-body);
   font-size: 1.25rem;
+  margin-top: 1.25rem;
 }
