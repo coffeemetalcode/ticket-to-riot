@@ -1,14 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { Book } from './components/book/book';
-import { Home } from './components/home/home';
-import { Live } from './components/live/live';
-import { Merch } from './components/merch/merch';
-
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: Home },
-  { path: 'book', component: Book },
-  { path: 'merch', component: Merch },
-  { path: 'live', component: Live },
+  { path: 'home', loadComponent: () => import('./components/home/home').then((m) => m.Home) },
+  { path: 'book', loadComponent: () => import('./components/book/book').then((m) => m.Book) },
+  { path: 'merch', loadComponent: () => import('./components/merch/merch').then((m) => m.Merch) },
+  { path: 'live', loadComponent: () => import('./components/live/live').then((m) => m.Live) },
+  { path: 'media', loadComponent: () => import('./components/media/media').then((m) => m.Media) },
 ];

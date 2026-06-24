@@ -3,7 +3,11 @@ import { inject, Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { ILiveEventsHttpResponse, ISocialLinksHttpResponse } from '@riot-models';
+import {
+  ILiveEventsHttpResponse,
+  IMediaHttpResponse,
+  ISocialLinksHttpResponse,
+} from '@riot-models';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +19,7 @@ export class GhData {
     'https://raw.githubusercontent.com/coffeemetalcode/ticket-to-riot/refs/heads/data/public/data';
   readonly #socialLinksUrl = `${this.#repoUrl}/social.json`;
   readonly #scheduleUrl = `${this.#repoUrl}/live.json`;
+  readonly #mediaUrl = `${this.#repoUrl}/media.json`;
 
   public getSocialLinks(): Observable<ISocialLinksHttpResponse> {
     return this.#http.get<any>(this.#socialLinksUrl);
@@ -22,5 +27,9 @@ export class GhData {
 
   public getSchedule(): Observable<ILiveEventsHttpResponse> {
     return this.#http.get<any>(this.#scheduleUrl);
+  }
+
+  public getMedia(): Observable<IMediaHttpResponse> {
+    return this.#http.get<any>(this.#mediaUrl);
   }
 }
