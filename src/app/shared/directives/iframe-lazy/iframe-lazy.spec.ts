@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IframeLazy } from './iframe-lazy';
 
 @Component({
-  template: `<iframe appIframeLazy [iframeTitle]="title" [allowFullscreen]="allowFs"></iframe>`,
+  template: `<iframe appIframeLazy [iframeTitle]="title()"></iframe>`,
   imports: [IframeLazy],
 })
 class TestHostComponent {
-  title = '';
-  allowFs = true;
+  title = signal('');
 }
 
 describe('IframeLazy', () => {
@@ -39,18 +38,8 @@ describe('IframeLazy', () => {
   });
 
   test('should set title from iframeTitle input', () => {
-    fixture.componentInstance.title = 'My Video';
+    fixture.componentInstance.title.set('My Video');
     fixture.detectChanges();
     expect(iframe.getAttribute('title')).toBe('My Video');
-  });
-
-  test('should set allowfullscreen when allowFullscreen is true (default)', () => {
-    expect(iframe.hasAttribute('allowfullscreen')).toBe(true);
-  });
-
-  test('should remove allowfullscreen when allowFullscreen is false', () => {
-    fixture.componentInstance.allowFs = false;
-    fixture.detectChanges();
-    expect(iframe.hasAttribute('allowfullscreen')).toBe(false);
   });
 });

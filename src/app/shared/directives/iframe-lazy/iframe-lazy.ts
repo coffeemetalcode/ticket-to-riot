@@ -14,10 +14,10 @@ import { Directive, input } from '@angular/core';
     loading: 'lazy',
     referrerpolicy: 'no-referrer-when-downgrade',
     '[attr.title]': 'iframeTitle()',
-    '[attr.allowfullscreen]': 'allowFullscreen() ? "" : null',
+    // TODO: try `allowFullscreen` again, and make ensure signals are used
+    // throughout
   },
 })
 export class IframeLazy {
   readonly iframeTitle = input<string>('');
-  readonly allowFullscreen = input<boolean>(true);
 }

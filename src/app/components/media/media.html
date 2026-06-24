@@ -1,1 +1,25 @@
-<p>media works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-4 text-center mb-4">Media</h1>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-lg-8 mx-auto">
+      @for (link of media(); track link.id) {
+        <h4>{{ link.title }}</h4>
+        <p>{{ link.description }}</p>
+        <div class="ratio ratio-16x9 media-div">
+          <iframe
+            appIframeLazy
+            [iframeTitle]="link.title"
+            frameborder="0"
+            [src]="sanitizeUrl(link.embedUrl)"
+            allow="web-share"
+          ></iframe>
+        </div>
+      }
+    </div>
+  </div>
+</div>
