@@ -17,12 +17,7 @@ export class Media implements OnInit {
 
   protected media = signal<IMediaItem[]>([]);
 
-  ytUrl = `https://www.youtube.com/embed/QO0hTbmry5E?si=D3w49QQa4vzD1Hie`;
-  safeYTUrl!: SafeResourceUrl;
-
   ngOnInit(): void {
-    this.safeYTUrl = this.#sanitizer.bypassSecurityTrustResourceUrl(this.ytUrl);
-
     this.#ghDataService.getMedia().subscribe((data) => {
       this.media.set(data.media);
     });
